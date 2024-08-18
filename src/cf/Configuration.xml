@@ -215,7 +215,7 @@
 			<ConfigurationInformationAddress/>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<ObjectAutonumerationMode>NotAutoFree</ObjectAutonumerationMode>
-			<ModalityUseMode>DontUse</ModalityUseMode>
+			<ModalityUseMode>Use</ModalityUseMode>
 			<SynchronousPlatformExtensionAndAddInCallUseMode>DontUse</SynchronousPlatformExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
 			<DatabaseTablespacesUseMode>DontUse</DatabaseTablespacesUseMode>
@@ -226,8 +226,12 @@
 			<Language>Русский</Language>
 			<Subsystem>ПодарочныеСертификаты</Subsystem>
 			<Role>ПолныеПрава</Role>
+			<CommonTemplate>PinkRabbitMQ</CommonTemplate>
 			<CommonModule>ОбщегоНазначения</CommonModule>
 			<CommonModule>ОбщегоНазначенияСлужебныйКлиентСервер</CommonModule>
+			<CommonModule>RebbitMQКлиент</CommonModule>
+			<CommonModule>RebbitMQСервер</CommonModule>
+			<CommonModule>RebbitMQКлиентСервер</CommonModule>
 			<Catalog>Сертификаты</Catalog>
 			<Catalog>НоминалыСертификатов</Catalog>
 			<Catalog>Контрагенты</Catalog>
@@ -235,7 +239,9 @@
 			<Document>ПогашениеСертификата</Document>
 			<Enum>СтатусыСертификатов</Enum>
 			<DataProcessor>ГенерацияСертификатов</DataProcessor>
+			<DataProcessor>ОбменСКроликом</DataProcessor>
 			<InformationRegister>СтатусыСертификатов</InformationRegister>
+			<InformationRegister>КАБНастройкиПодключенияКRebbitMQ</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
