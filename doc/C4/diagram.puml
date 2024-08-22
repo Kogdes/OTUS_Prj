@@ -1,0 +1,16 @@
+@startuml Basic Sample
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml
+
+Person(Customer, "Покупатель", "")
+Person(Presenter, "Предъявитель")
+System_Boundary(c1, "Система учета сертификатов") {
+    Container(App_Sert, "Учет сертификатов", "1С MVP", "")
+    Container(Rabbit, "Брокер сообщений RabbitMQ", "", "")
+}
+System(1C_Trade, "1C Управление торговлей")
+
+Rel(App_Sert, Customer, "Покупка сертификата", "")
+Rel(Presenter, App_Sert, "Погашение сертификата", "")
+Rel(Rabbit, 1C_Trade, "Выгрузка данных о покупке сертификата", "JSON")
+Rel(Rabbit, 1C_Trade, "Выгрузка данных о погашении сертификата", "JSON")
+@enduml
